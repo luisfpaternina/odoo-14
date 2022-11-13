@@ -34,6 +34,14 @@ class Students(models.Model):
             result.append((rec.id, '%s - %s'%(rec.identification_number, rec.name)))
         return result
 
+    @api.model
+    def _name_search(self, name, args=None, operator='ilike', limit=100, name_get_uid=None):
+        args = args or []
+        domain = []
+        if name:
+            domain = ['|', ('name', operator, name), ('identification_number', operator, name)]
+        result self._search(domain + args, limit=limit, acess_rights_uid=name_get_uid)
+
 
     _sql_constraints = [
 
