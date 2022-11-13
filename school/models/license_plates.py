@@ -12,8 +12,7 @@
 #
 ###################################################################################################################################
 
-
-from odoo import models, fields, api,_
+from odoo import models, fields, api, _
 
 
 class LicensePlates(models.Model):
@@ -21,7 +20,6 @@ class LicensePlates(models.Model):
     _name = "license.plates"
     _description = "License plates"
 
-    
     name = fields.Char(string="Nombre", readonly=True, required=True, copy=False, tracking=True, default='New')
     student_id = fields.Many2one('students', string="Student")
     course = fields.Char(string="Course")
