@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #BY: LUIS FELIPE PATERNINA VITAL
-from odoo import models, fields,_
+from odoo import models, fields, api, _
 from odoo.exceptions import ValidationError
 
 
