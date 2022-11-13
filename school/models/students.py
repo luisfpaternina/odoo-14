@@ -40,7 +40,7 @@ class Students(models.Model):
         domain = []
         if name:
             domain = ['|', ('name', operator, name), ('identification_number', operator, name)]
-        return self._search(domain + args, limit=limit, acess_rights_uid=name_get_uid)
+        return self._search(domain + args, limit=limit, access_rights_uid=name_get_uid)
 
 
     _sql_constraints = [
