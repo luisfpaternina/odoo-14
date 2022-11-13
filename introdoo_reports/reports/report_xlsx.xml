@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+
+        <report
+                id="report_customer_xlsx"
+                string="Generar Excel"
+                model="sale.order"
+                report_type="xlsx"
+                name="introdoo_reports.report_customer_xlsx"
+                file="introdoo_reports.report_customer_xlsx"/>
+
+    </data>
+</odoo>

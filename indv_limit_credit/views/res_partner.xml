@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="inherit_view_res_partner_credit" model="ir.ui.view">
+        <field name="name">res.partner.form.inherit</field>
+        <field name="model">res.partner</field>
+        <field name="priority" eval="1"/>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//field[(@name='email')]" position="after">
+                <field name="has_credit" invisible="1"/>
+                <field name="credit_value" invisible="1"/>
+                <field name="new_vat" invisible="1"/>
+                <field name="validate_vat" invisible="1"/>
+            </xpath>
+
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="custom_view_res_partner_search">
+            <field name="name">custom.res.partner.search</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_res_partner_filter"/>
+            <field name="arch" type="xml">
+                <field name="user_id" position="after">
+                    <separator/>
+                    <field name="has_credit"/>
+                </field>
+               
+               <!-- 
+                <xpath expr="//search/group" position="inside">
+                    <filter string="Contact type" name="partner_type_id" context="{'group_by':'partner_type_id'}"/>
+                </xpath>
+                -->
+
+            </field>
+    </record>
+
+    <record id="inherit_tree_res_partner_credit" model="ir.ui.view">
+        <field name="name">res.partner.tree.inherit</field>
+        <field name="model">res.partner</field>
+        <field name="priority" eval="1"/>
+        <field name="inherit_id" ref="base.view_partner_tree"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//field[@name='user_id']" position="after">
+                <field name="has_credit" invisible="1"/>
+            </xpath>
+            
+        </field>
+    </record>
+ 
+</odoo>     

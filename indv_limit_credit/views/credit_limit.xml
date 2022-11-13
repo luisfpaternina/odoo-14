@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>     
+<odoo>
+    <data>
+
+        <!-- TREE VIEW -->
+        <record id="view_credit_limit_tree" model="ir.ui.view">
+            <field name="name">credit.limit.tree</field>
+            <field name="model">credit.limit</field>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <tree string="credit_limit">
+                    <field name="create_date"/>
+                    <field name="name"/>
+                    <field name="partner_id"/>
+                    <field name="credit_amount"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- FORM VIEW -->
+        <record id="view_credit_limit_form" model="ir.ui.view">
+            <field name="name">credit.limit.form</field>
+            <field name="model">credit.limit</field>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <form string="credit">
+                    <!-- HEADER -->
+                    <header>
+                        <button 
+                            name="write_current_state"
+                            string="send to verify"
+                            type="object"
+                            attrs="{'invisible': [('state', '!=', 'draft')]}"
+                            class="btn btn-primary"/>
+                        <button 
+                            name="write_approval_state"
+                            string="approval"
+                            type="object"
+                            attrs="{'invisible': [('state', '!=', 'current')]}"
+                            class="btn btn-primary"/>
+                        <button 
+                            name="write_cancel_state"
+                            string="CANCEL"
+                            type="object"
+                            attrs="{'invisible': [('state', '=', 'cancel')]}"
+                            class="btn btn-danger"
+                            confirm="Are you sure you want to cancel this?"/>
+                        <button 
+                            name="compute_credits"
+                            string="Generate Quotas"
+                            type="object"
+                            class="btn btn-success"
+                            attrs="{'invisible': [('state', '!=', 'draft')]}"/>
+                        <field name="state" widget="statusbar" readonly="1"/>
+                    </header>
+                    <!-- SHEET -->
+                    <sheet>
+                        <widget name="web_ribbon" text="Approved" bg_color="bg-success" attrs="{'invisible': [('is_approval_credit', '=', False)]}"/>
+                        <widget name="web_ribbon" text="Cancel" bg_color="bg-danger" attrs="{'invisible': [('is_cancel_credit', '=', False)]}"/>
+                        <div class="oe_title">
+                            <h1>
+                                <table>
+                                    <tr>
+                                        <td style="padding-right:10px;">
+                                            <field name="name" required="1"/>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="partner_id" required="1" options="{'no_create': True, 'no_create_edit':True}" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                <field name="vat"/>
+                                <field name="create_date"/>
+                                <field name="current_user_id" readonly="1"/>
+                                <field name="is_approval_credit" invisible="1"/>
+                                <field name="is_cancel_credit" invisible="1"/>
+                            </group>
+                            <group>
+                                <field name="credit_type" required="1" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                <field name="entity_type" attrs="{'invisible': [('credit_type', '!=', 'third')], 'required': [('credit_type', '=', 'third')]}"/>
+                                <field name="bank_id" attrs="{'invisible': [('entity_type', '!=', 'bank')], 'required': [('entity_type', '=', 'bank')]}" options="{'no_create': True, 'no_create_edit':True}"/>
+                                <field name="entity_id" attrs="{'invisible': [('entity_type', '!=', 'other')], 'required': [('entity_type', '=', 'other')]}"/>
+                                <field name="credit_amount" required="1" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                <field name="fee_numbers" required="1" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                <field name="percentage" required="1" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                <field name="credit_amount_total"/>
+                            </group>
+                        </group>
+                        <br></br><br></br>
+                        <notebook colspan="4">
+                            <page name="credit_information" string="Quotas">
+                                <group>
+                                    <field name="credit_line_ids" readonly="1" style="pointer-events:none;">
+                                        <tree editable="bottom">
+                                            <field name="item" invisible="1"/>
+                                            <field name="name"/>
+                                            <field name="credit_amount" sum="credit_amount"/>
+                                            <field name="credit_id" invisible="1"/>
+                                            <field name="date"/>
+                                        </tree>
+                                    </field>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_credit_limit_search" model="ir.ui.view">                                
+          <field name="name">credit.limit.search</field>                                
+          <field name="model">credit.limit</field>                                
+          <field name="arch" type="xml">                                    
+            <search string="Search credit_limit">
+                    <field name="name"/>
+                    <field name="state"/>
+                                                                              
+                <group expand="0" string="Group By">                                            
+                    <filter string="Partner" name="partner_id" context="{'group_by': 'partner_id'}"></filter>
+                    <filter string="State" name="state" context="{'group_by': 'state'}"></filter>
+                </group>                                    
+            </search>                                
+          </field>                            
+        </record>
+
+        <!-- ACTION -->
+        <record model="ir.actions.act_window" id="action_view_credit_limit">
+            <field name="name">Credit limit</field>
+            <field name="res_model">credit.limit</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Create new record
+                </p>
+            </field>
+        </record>
+
+        <!-- MENUS -->
+        <menuitem 
+            id="menu_credit_limit_principal"
+            name="Credits"
+            groups="indv_limit_credit.credit_limit_manager_group"
+            web_icon="indv_limit_credit,static/description/icon.png"
+            action="action_view_credit_limit"
+            sequence="36"/>
+
+        <menuitem 
+            id="menu_credit_limit"
+            name="Credit limit"
+            parent="menu_credit_limit_principal"
+            action="action_view_credit_limit"/>
+
+        <menuitem 
+            id="menu_credit_limit_settings"
+            name="Settings"
+            parent="menu_credit_limit_principal"
+            action="action_view_credit_limit"/>
+                   
+    </data>
+</odoo>

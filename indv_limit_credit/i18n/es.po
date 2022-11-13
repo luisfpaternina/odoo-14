@@ -1,0 +1,520 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* indv_limit_credit
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-10-12 16:46+0000\n"
+"PO-Revision-Date: 2022-10-12 16:46+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: indv_limit_credit
+#: model:ir.model.fields,field_description:indv_limit_credit.field_credit_limit__message_needaction
+msgid "Action Needed"
+msgstr "Necesita acción"
+
+#. module: indv_limit_credit
+#: model:ir.model.fields.selection,name:indv_limit_credit.selection__credit_limit__state__approved
+msgid "Approved"
+msgstr "Aprobado"
+
+#. module: indv_limit_credit
+#: model:ir.model.fields,field_description:indv_limit_credit.field_credit_limit__is_approval_credit
+msgid "Aproval credit"
+msgstr "Cédito aprovado"
+
+#. module: indv_limit_credit
+#: model_terms:ir.ui.view,arch_db:indv_limit_credit.view_credit_limit_form
+msgid "Are you sure you want to cancel this?"
+msgstr "Esta seguro que desea cancelar el crédito?"
+
+#. module: indv_limit_credit
+#: model:ir.model.fields,field_description:indv_limit_credit.field_credit_limit__message_attachment_count
+msgid "Attachment Count"
+msgstr "Contador de adjuntos"
+
+#. module: indv_limit_credit
+#: model:ir.model.fields,field_description:indv_limit_credit.field_credit_limit__bank_id
+#: model:ir.model.fields.selection,name:indv_limit_credit.selection__credit_limit__entity_type__bank
+msgid "Bank"
+msgstr "Banco"
+
+#. module: indv_limit_credit
+#: model_terms:ir.ui.view,arch_db:indv_limit_credit.view_credit_limit_form
+msgid "CANCEL"
+msgstr "CANCELAR"
+
+#. module: indv_limit_credit
+#: model:ir.model.fields.selection,name:indv_limit_credit.selection__credit_limit__state__cancel
+msgid "Cancel"
+msgstr "CANCELADO"
+
+#. module: indv_limit_credit
+#: model:ir.model.fields,field_description:indv_limit_credit.field_credit_limit__is_cancel_credit
+msgid "Cancel credit"
+msgstr "Crédito cancelado"
+
+#. module: indv_limit_credit
+#: code:addons/indv_limit_credit/models/account_move.py:0
+#: code:addons/indv_limit_credit/models/sale_order.py:0
+#, python-format
+msgid ""
+"Cannot make this sale because the amount exceeds the customer's credit "
+"limit: %s"
+msgstr ""
+"No se puede realizar esta operación porque el monto excede el límite de "
+"crédito del cliente"
+
+#. module: indv_limit_credit
+#: model:ir.model.fields,field_description:indv_limit_credit.field_credit_limit__company_id
+msgid "Company"
+msgstr "Compañía"
+
+#. module: indv_limit_credit
+#: model:ir.model,name:indv_limit_credit.model_res_partner
+msgid "Contact"
+msgstr "Contacto"
+
+#. module: indv_limit_credit
+#: model_terms:ir.actions.act_window,help:indv_limit_credit.action_view_credit_limit
+msgid "Create new record"
+msgstr "Crear nuevo registro"
+
+#. module: indv_limit_credit
+#: model:ir.model.fields,field_description:indv_limit_credit.field_credit_limit__create_uid
+#: model:ir.model.fields,field_description:indv_limit_credit.field_credit_limit_lines__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: indv_limit_credit
+#: model:ir.model.fields,field_description:indv_limit_credit.field_credit_limit__create_date
+#: model:ir.model.fields,field_description:indv_limit_credit.field_credit_limit_lines__create_date
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: indv_limit_credit
+#: model:ir.model.fields,field_description:indv_limit_credit.field_credit_limit_lines__credit_id
+msgid "Credit"
+msgstr "Crédito"
+
+#. module: indv_limit_credit
+#: model:ir.model.fields,field_description:indv_limit_credit.field_credit_limit__credit_amount
+#: model:ir.model.fields,field_description:indv_limit_credit.field_credit_limit_lines__credit_amount
+msgid "Credit amount"
+msgstr "Monto del crédito"
+
+#. module: indv_limit_credit
+#: model:ir.actions.act_window,name:indv_limit_credit.action_view_credit_limit
+#: model:ir.model,name:indv_limit_credit.model_credit_limit
+#: model:ir.ui.menu,name:indv_limit_credit.menu_credit_limit
+msgid "Credit limit"
+msgstr "Cupo de crédito"
+
+#. module: indv_limit_credit
+#: model:ir.model,name:indv_limit_credit.model_credit_limit_lines
+msgid "Credit limit lines"
+msgstr "Líneas de crédito"
+
+#. module: indv_limit_credit
+#: model:ir.model.fields,field_description:indv_limit_credit.field_credit_limit__credit_type
+msgid "Credit type"
+msgstr "Tipo"
+
+#. module: indv_limit_credit
+#: model:ir.model.fields,field_description:indv_limit_credit.field_account_bank_statement_line__credit_value
+#: model:ir.model.fields,field_description:indv_limit_credit.field_account_move__credit_value
+#: model:ir.model.fields,field_description:indv_limit_credit.field_account_payment__credit_value
+#: model:ir.model.fields,field_description:indv_limit_credit.field_res_partner__credit_value
+#: model:ir.model.fields,field_description:indv_limit_credit.field_res_users__credit_value
+#: model:ir.model.fields,field_description:indv_limit_credit.field_sale_order__credit_value
+msgid "Credit value"
+msgstr "Valor del crédito"
+
+#. module: indv_limit_credit
+#: model:ir.ui.menu,name:indv_limit_credit.menu_credit_limit_principal
+msgid "Credits"
+msgstr "Créditos"
+
+#. module: indv_limit_credit
+#: model:ir.model.fields,field_description:indv_limit_credit.field_credit_limit__current_user_id
+msgid "Current User"
+msgstr "Usuario"
+
+#. module: indv_limit_credit
+#: model:ir.model.fields,field_description:indv_limit_credit.field_credit_limit_lines__date
+msgid "Date"
+msgstr "Fecha"
+
+#. module: indv_limit_credit
+#: model:ir.model.fields,field_description:indv_limit_credit.field_credit_limit__description
+#: model:ir.model.fields,field_description:indv_limit_credit.field_credit_limit_lines__description
+msgid "Description"
+msgstr "Descripción"
+
+#. module: indv_limit_credit
+#: model:ir.model.fields.selection,name:indv_limit_credit.selection__credit_limit__credit_type__direct
+msgid "Direct"
+msgstr "Directo"
+
+#. module: indv_limit_credit
+#: model:ir.model.fields,field_description:indv_limit_credit.field_account_move__display_name
+#: model:ir.model.fields,field_description:indv_limit_credit.field_credit_limit__display_name
+#: model:ir.model.fields,field_description:indv_limit_credit.field_credit_limit_lines__display_name
+#: model:ir.model.fields,field_description:indv_limit_credit.field_res_partner__display_name
+#: model:ir.model.fields,field_description:indv_limit_credit.field_sale_order__display_name
+msgid "Display Name"
+msgstr "Nombre mostrado"
+
+#. module: indv_limit_credit
+#: model:ir.model.fields.selection,name:indv_limit_credit.selection__credit_limit__state__done
+msgid "Done"
+msgstr "Realizado"
+
+#. module: indv_limit_credit
+#: model:ir.model.fields.selection,name:indv_limit_credit.selection__credit_limit__state__draft
+msgid "Draft"
+msgstr "Borrador"
+
+#. module: indv_limit_credit
+#: model:ir.model.fields,field_description:indv_limit_credit.field_credit_limit__entity_id
+msgid "Entity"
+msgstr "Entidad"
+
+#. module: indv_limit_credit
+#: model:ir.model.fields,field_description:indv_limit_credit.field_credit_limit__entity_type
+msgid "Entity type"
+msgstr "Tipo de entidad"
+
+#. module: indv_limit_credit
+#: model:ir.model.fields,field_description:indv_limit_credit.field_credit_limit__fee_numbers
+msgid "Fee"
+msgstr "Cuotas"
+
+#. module: indv_limit_credit
+#: model:ir.model.fields,field_description:indv_limit_credit.field_credit_limit__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: indv_limit_credit
+#: model:ir.model.fields,field_description:indv_limit_credit.field_credit_limit__message_channel_ids
+msgid "Followers (Channels)"
+msgstr ""
+
+#. module: indv_limit_credit
+#: model:ir.model.fields,field_description:indv_limit_credit.field_credit_limit__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: indv_limit_credit
+#: model_terms:ir.ui.view,arch_db:indv_limit_credit.view_credit_limit_form
+msgid "Generate Quotas"
+msgstr "GENERAR Y CALCULAR CUOTAS"
+
+#. module: indv_limit_credit
+#: model_terms:ir.ui.view,arch_db:indv_limit_credit.view_credit_limit_search
+msgid "Group By"
+msgstr "Agrupar por"
+
+#. module: indv_limit_credit
+#: model:ir.model.fields,field_description:indv_limit_credit.field_account_bank_statement_line__has_credit
+#: model:ir.model.fields,field_description:indv_limit_credit.field_account_move__has_credit
+#: model:ir.model.fields,field_description:indv_limit_credit.field_account_payment__has_credit
+#: model:ir.model.fields,field_description:indv_limit_credit.field_res_partner__has_credit
+#: model:ir.model.fields,field_description:indv_limit_credit.field_res_users__has_credit
+#: model:ir.model.fields,field_description:indv_limit_credit.field_sale_order__has_credit
+msgid "Has a current credit"
+msgstr "Tiene crédito activo"
+
+#. module: indv_limit_credit
+#: model:ir.model.fields,field_description:indv_limit_credit.field_account_move__id
+#: model:ir.model.fields,field_description:indv_limit_credit.field_credit_limit__id
+#: model:ir.model.fields,field_description:indv_limit_credit.field_credit_limit_lines__id
+#: model:ir.model.fields,field_description:indv_limit_credit.field_res_partner__id
+#: model:ir.model.fields,field_description:indv_limit_credit.field_sale_order__id
+msgid "ID"
+msgstr ""
+
+#. module: indv_limit_credit
+#: model:ir.model.fields,help:indv_limit_credit.field_credit_limit__vat
+msgid "Identification Number for selected type"
+msgstr ""
+
+#. module: indv_limit_credit
+#: model:ir.model.fields,help:indv_limit_credit.field_credit_limit__message_needaction
+#: model:ir.model.fields,help:indv_limit_credit.field_credit_limit__message_unread
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: indv_limit_credit
+#: model:ir.model.fields,help:indv_limit_credit.field_credit_limit__message_has_error
+#: model:ir.model.fields,help:indv_limit_credit.field_credit_limit__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: indv_limit_credit
+#: model:ir.model.fields,field_description:indv_limit_credit.field_credit_limit__message_is_follower
+msgid "Is Follower"
+msgstr "Es un seguidor"
+
+#. module: indv_limit_credit
+#: model:ir.model.fields,field_description:indv_limit_credit.field_credit_limit_lines__item
+msgid "Item"
+msgstr ""
+
+#. module: indv_limit_credit
+#: model:ir.model,name:indv_limit_credit.model_account_move
+msgid "Journal Entry"
+msgstr "Asiento contable"
+
+#. module: indv_limit_credit
+#: model:ir.model.fields,field_description:indv_limit_credit.field_account_move____last_update
+#: model:ir.model.fields,field_description:indv_limit_credit.field_credit_limit____last_update
+#: model:ir.model.fields,field_description:indv_limit_credit.field_credit_limit_lines____last_update
+#: model:ir.model.fields,field_description:indv_limit_credit.field_res_partner____last_update
+#: model:ir.model.fields,field_description:indv_limit_credit.field_sale_order____last_update
+msgid "Last Modified on"
+msgstr "Última modificación el"
+
+#. module: indv_limit_credit
+#: model:ir.model.fields,field_description:indv_limit_credit.field_credit_limit__write_uid
+#: model:ir.model.fields,field_description:indv_limit_credit.field_credit_limit_lines__write_uid
+msgid "Last Updated by"
+msgstr "Última modificación por"
+
+#. module: indv_limit_credit
+#: model:ir.model.fields,field_description:indv_limit_credit.field_credit_limit__write_date
+#: model:ir.model.fields,field_description:indv_limit_credit.field_credit_limit_lines__write_date
+msgid "Last Updated on"
+msgstr "Última modificación en"
+
+#. module: indv_limit_credit
+#: model:ir.model.fields,field_description:indv_limit_credit.field_credit_limit__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: indv_limit_credit
+#: model:res.groups,name:indv_limit_credit.credit_limit_manager_group
+msgid "Manager credit limit"
+msgstr "Administrador cupo de crédito"
+
+#. module: indv_limit_credit
+#: model:res.groups,comment:indv_limit_credit.credit_limit_manager_group
+msgid "Manager credit limit Permission Group"
+msgstr "Administrador cupo de crédito"
+
+#. module: indv_limit_credit
+#: model:res.groups,name:indv_limit_credit.credit_limit_approval_manager_group
+msgid "Manager credit limit approval"
+msgstr "Aprobador cupo de crédito"
+
+#. module: indv_limit_credit
+#: model:res.groups,comment:indv_limit_credit.credit_limit_approval_manager_group
+msgid "Manager credit limit approval Permission Group"
+msgstr "Aprobador cupo de crédito"
+
+#. module: indv_limit_credit
+#: model:ir.model.fields,field_description:indv_limit_credit.field_credit_limit__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: indv_limit_credit
+#: model:ir.model.fields,field_description:indv_limit_credit.field_credit_limit__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: indv_limit_credit
+#: model:ir.model.fields,field_description:indv_limit_credit.field_credit_limit__name
+#: model:ir.model.fields,field_description:indv_limit_credit.field_credit_limit_lines__name
+msgid "Name"
+msgstr "Nombre"
+
+#. module: indv_limit_credit
+#: model:ir.model.fields,field_description:indv_limit_credit.field_credit_limit__installment
+#: model:ir.model.fields,field_description:indv_limit_credit.field_credit_limit_lines__installment
+msgid "No Of Installments"
+msgstr ""
+
+#. module: indv_limit_credit
+#: model:ir.model.fields,field_description:indv_limit_credit.field_credit_limit__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: indv_limit_credit
+#: model:ir.model.fields,field_description:indv_limit_credit.field_credit_limit__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: indv_limit_credit
+#: model:ir.model.fields,help:indv_limit_credit.field_credit_limit__installment
+#: model:ir.model.fields,help:indv_limit_credit.field_credit_limit_lines__installment
+msgid "Number of installments"
+msgstr ""
+
+#. module: indv_limit_credit
+#: model:ir.model.fields,help:indv_limit_credit.field_credit_limit__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: indv_limit_credit
+#: model:ir.model.fields,help:indv_limit_credit.field_credit_limit__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: indv_limit_credit
+#: model:ir.model.fields,help:indv_limit_credit.field_credit_limit__message_unread_counter
+msgid "Number of unread messages"
+msgstr ""
+
+#. module: indv_limit_credit
+#: code:addons/indv_limit_credit/models/credit_limit.py:0
+#: code:addons/indv_limit_credit/models/credit_limit.py:0
+#: code:addons/indv_limit_credit/models/credit_limit.py:0
+#, python-format
+msgid "Only credit Managers can approve credits"
+msgstr ""
+"Solo los usuarios que pertenecen al grupo de aprobador de crédito pueden "
+"realizar esta operación"
+
+#. module: indv_limit_credit
+#: model:ir.model.fields.selection,name:indv_limit_credit.selection__credit_limit__entity_type__other
+msgid "Other"
+msgstr "Otro"
+
+#. module: indv_limit_credit
+#: model:ir.model.fields,field_description:indv_limit_credit.field_credit_limit__partner_id
+#: model_terms:ir.ui.view,arch_db:indv_limit_credit.view_credit_limit_search
+msgid "Partner"
+msgstr "Cliente"
+
+#. module: indv_limit_credit
+#: model:ir.model.fields,field_description:indv_limit_credit.field_credit_limit__date
+msgid "Payment Start Date"
+msgstr ""
+
+#. module: indv_limit_credit
+#: model:ir.model.fields,field_description:indv_limit_credit.field_credit_limit__credit_line_ids
+#: model_terms:ir.ui.view,arch_db:indv_limit_credit.view_credit_limit_form
+msgid "Quotas"
+msgstr "Cuotas"
+
+#. module: indv_limit_credit
+#: model:ir.model.fields,field_description:indv_limit_credit.field_credit_limit__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: indv_limit_credit
+#: model:ir.model,name:indv_limit_credit.model_sale_order
+msgid "Sales Order"
+msgstr "Pedido de venta"
+
+#. module: indv_limit_credit
+#: model_terms:ir.ui.view,arch_db:indv_limit_credit.view_credit_limit_search
+msgid "Search credit_limit"
+msgstr ""
+
+#. module: indv_limit_credit
+#: model:ir.model.fields,field_description:indv_limit_credit.field_credit_limit__state
+#: model_terms:ir.ui.view,arch_db:indv_limit_credit.view_credit_limit_search
+msgid "State"
+msgstr "Estado"
+
+#. module: indv_limit_credit
+#: code:addons/indv_limit_credit/models/credit_limit.py:0
+#, python-format
+msgid "The credit amount can not 0: %s"
+msgstr "El monto del crédito no puede ser menor a cero"
+
+#. module: indv_limit_credit
+#: code:addons/indv_limit_credit/models/credit_limit.py:0
+#, python-format
+msgid "The faa numbers can not 0: %s"
+msgstr "El número de cuotas del crédito no puede ser menor a cero"
+
+#. module: indv_limit_credit
+#: code:addons/indv_limit_credit/models/credit_limit.py:0
+#, python-format
+msgid "The percentage can not 0: %s"
+msgstr "La tasa de interés no puede ser menor a cero"
+
+#. module: indv_limit_credit
+#: model:ir.model.fields.selection,name:indv_limit_credit.selection__credit_limit__credit_type__third
+msgid "Third"
+msgstr "Tercero"
+
+#. module: indv_limit_credit
+#: model_terms:ir.ui.view,arch_db:indv_limit_credit.inherti_view_credit_sale_order
+msgid "This contact has a current credit"
+msgstr "Este cliente tiene un crédito en curso"
+
+#. module: indv_limit_credit
+#: code:addons/indv_limit_credit/models/credit_limit.py:0
+#, python-format
+msgid "This partner already a credit in current: %s"
+msgstr "Este cliente ya tiene un crédito en curso"
+
+#. module: indv_limit_credit
+#: model:ir.model.fields,field_description:indv_limit_credit.field_credit_limit__credit_amount_total
+msgid "Total"
+msgstr ""
+
+#. module: indv_limit_credit
+#: model:ir.model.fields,field_description:indv_limit_credit.field_credit_limit__message_unread
+msgid "Unread Messages"
+msgstr ""
+
+#. module: indv_limit_credit
+#: model:ir.model.fields,field_description:indv_limit_credit.field_credit_limit__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr ""
+
+#. module: indv_limit_credit
+#: model:ir.model.fields,field_description:indv_limit_credit.field_credit_limit__vat
+msgid "VAT"
+msgstr "Número de identificación"
+
+#. module: indv_limit_credit
+#: model:ir.model.fields.selection,name:indv_limit_credit.selection__credit_limit__state__current
+msgid "Validation"
+msgstr "Verificación"
+
+#. module: indv_limit_credit
+#: model:ir.model.fields,field_description:indv_limit_credit.field_credit_limit__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: indv_limit_credit
+#: model:ir.model.fields,help:indv_limit_credit.field_credit_limit__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: indv_limit_credit
+#: model_terms:ir.ui.view,arch_db:indv_limit_credit.view_credit_limit_form
+msgid "approval"
+msgstr "Aprobado"
+
+#. module: indv_limit_credit
+#: model_terms:ir.ui.view,arch_db:indv_limit_credit.view_credit_limit_form
+msgid "credit"
+msgstr "Crédito"
+
+#. module: indv_limit_credit
+#: model_terms:ir.ui.view,arch_db:indv_limit_credit.view_credit_limit_tree
+msgid "credit_limit"
+msgstr "limite_credito"
+
+#. module: indv_limit_credit
+#: model:ir.model.fields,field_description:indv_limit_credit.field_credit_limit__percentage
+msgid "percentage"
+msgstr "Tasa de interés"
+
+#. module: indv_limit_credit
+#: model_terms:ir.ui.view,arch_db:indv_limit_credit.view_credit_limit_form
+msgid "send to verify"
+msgstr "ENVIAR A VERIFICACIÓN"
