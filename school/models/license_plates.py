@@ -36,7 +36,6 @@ class LicensePlates(models.Model):
     email = fields.Char(string="Email", related="student_id.email")
 
 
-
     #Secuencia para las matriculas de los estudiantes
     @api.model
     def create(self, vals):
@@ -45,7 +44,6 @@ class LicensePlates(models.Model):
 
         result = super(LicensePlates, self).create(vals)
         return result
-
 
     #crear nuevo registro en sale.order
     def create_record_in_Sale_order(self):
@@ -58,25 +56,3 @@ class LicensePlates(models.Model):
            
 		}
         self.env['sale.order'].create(vals)
-
-
-
-
-
-
-    
-    
-    
-
- 
-   
-
-
-
-
-
-
-
-    
-    
-    
