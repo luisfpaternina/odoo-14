@@ -24,6 +24,7 @@
     'data': [
         
         'data/sequences.xml',
+        'data/email_template.xml',
         'security/security.xml',
         'security/ir.model.access.csv',
         'views/credit_limit.xml',

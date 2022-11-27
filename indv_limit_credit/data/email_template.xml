@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>     
 <odoo>
     <data>
-
+        <record id="email_template_credit_limit" model="mail.template">
+            <field name="name">Enviar notificiación de crédito</field>
+            <field name="model_id" ref="indv_limit_credit.model_credit_limit"/>
+            <field name="subject">Crédito</field>
+            <field name="email_from"></field>
+            <field name="email_to"></field>
+            <field name="body_html" type="xml">
+                <div>
+                    <strong><p align="center">ESTO ES UNA PRUEBA DEL CANAL INTRODOO</p></strong>
+                </div>
+            </field>
+            <field name="lang">${user.lang}</field>
+            <field name="auto_delete" eval="False"/>
+        </record>
     </data>
 </odoo> 
