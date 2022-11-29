@@ -13,7 +13,6 @@
                 </group>
 
             <footer>
-                <button name="gadget_stopped_confirm" string="CONFIRM" type="object" class="btn btn-success"/>
                 <button special='cancel' string='CANCEL' class="btn btn-danger"/>
             </footer>
 
