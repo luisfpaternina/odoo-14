@@ -13,7 +13,15 @@
                 </group>
 
             <footer>
-                <button special='cancel' string='CANCEL' class="btn btn-danger"/>
+                <button
+                    name="update_taxes"
+                    string="CONFIRM"
+                    type="object"
+                    class="btn btn-success"/>
+                <button
+                    special='cancel'
+                    string='CANCEL'
+                    class="btn btn-danger"/>
             </footer>
 
             </form>

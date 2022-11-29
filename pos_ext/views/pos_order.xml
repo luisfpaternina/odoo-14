@@ -13,7 +13,7 @@
                     string="CHANGE TAXES"
                     type="object"
                     class="btn btn-warning"
-                    context="{default_line_id: active_id}"/>
+                   />
             </xpath>
 
         </field>
