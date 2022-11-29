@@ -15,5 +15,5 @@ class PosOrderLine(models.Model):
                'target': 'new',
                'view_id': self.env.ref('pos_ext.pos_order_line_wizard').id,
                'view_mode': 'form',
-               'context': {}
+               'context': {'default_order_id': self.order_id.id}
                }
