@@ -16,7 +16,7 @@ class WizardPosOrderLine(models.TransientModel):
     tax_ids = fields.Many2many(
         'account.tax',
         string="Taxes",
-        default=lambda self: self.env.context.get('active_id', None))
+        default=lambda self: self.env.context.get('active_id'))
 
     def update_taxes(self):
         line = self.env['pos.order.line'].search([('id', '=', self.line_id.id)], limit=1)
