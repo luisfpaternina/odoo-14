@@ -19,10 +19,6 @@ class WizardPosOrderLine(models.TransientModel):
 
     def update_taxes(self):
         pedido = self.env['pos.order'].browse(self.order_id.id)
-        logging.info('--------------------------------------')
-        logging.info(pedido)
         taxes = self.env['account.tax'].browse(self.tax_ids.ids)
-        logging.info('***************************************')
-        logging.info(taxes)
-        for p in pedido.lines:
-            p.write({'tax_ids': taxes})
+        linea = self.line_id
+        linea.write({'tax_ids': taxes})
