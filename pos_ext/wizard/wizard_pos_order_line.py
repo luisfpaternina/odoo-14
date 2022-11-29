@@ -5,6 +5,9 @@ class WizardPosOrderLine(models.TransientModel):
     _name = "pos.order.line.wizard"
     _description = "Pos order lie wizard"
 
+    order_id = fields.Many2one(
+        'pos.order',
+        string="Order")
     line_id = fields.Many2one(
         'pos.order.line',
         string="Line")
