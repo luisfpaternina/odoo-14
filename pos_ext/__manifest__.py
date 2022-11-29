@@ -22,7 +22,7 @@
     'data': [
         
         'security/security.xml',
-        #'security/ir.model.access.csv',
+        'security/ir.model.access.csv',
         'views/pos_order.xml',
                    
     ],

@@ -8,3 +8,6 @@ class WizardPosOrderLine(models.TransientModel):
     line_id = fields.Many2one(
         'pos.order.line',
         string="Line")
+    tax_ids = fields.Many2many(
+        'account.tax',
+        string="Taxes")
