@@ -4,6 +4,6 @@ from datetime import datetime
 class PosOrderLine(models.Model):
     _inherit = 'pos.order.line'
 
-    taxes_ids = fields.Many2many(
+    tax_ids = fields.Many2many(
         'account.tax',
         string="Taxes")
