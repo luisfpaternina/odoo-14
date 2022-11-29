@@ -8,6 +8,7 @@
         <field name="arch" type="xml">
             <form>
                 <group>
+                    <field name="order_id" readonly="0"/>
                     <field name='line_id' readonly="0"/>
                     <field name="tax_ids" required="1" widget="many2many_tags"/>
                 </group>
