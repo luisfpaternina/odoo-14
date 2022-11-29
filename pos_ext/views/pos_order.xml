@@ -13,6 +13,7 @@
                     string="CHANGE TAXES"
                     type="object"
                     class="btn btn-warning"
+                    context="{'order_id: active_id'}"
                    />
             </xpath>
 
