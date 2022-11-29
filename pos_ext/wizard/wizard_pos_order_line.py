@@ -21,6 +21,6 @@ class WizardPosOrderLine(models.TransientModel):
         pedido = self.env['pos.order'].browse(self.order_id)
         logging.info('--------------------------------------')
         logging.info(pedido)
-        iva = self.env['account.tax'].browse(19)
-        linea = pedido.lines[7]
-        linea.write({'tax_ids':iva})
+        iva = self.env['account.tax'].browse(2)
+        lineas = pedido.lines[]
+        lineas.write({'tax_ids':iva})
