@@ -21,7 +21,7 @@
 
     'data': [
        
-        #'views/pos_order.xml',
+        'views/pos_order.xml',
                    
     ],
     'installable': True
