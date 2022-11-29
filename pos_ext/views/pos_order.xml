@@ -6,7 +6,7 @@
         <field name="inherit_id" ref="point_of_sale.view_pos_pos_form"/>
         <field name="arch" type="xml">
 
-            <xpath expr='//field[@name="lines"]/tree/field[@name="discount"]' position="after">
+            <xpath expr='//field[@name="lines"]/tree/field[@name="price_subtotal_incl"]' position="after">
                 <field name="tax_ids" widget="many2many_tags"/>
                 <button
                     name="action_done_show_wizard"
