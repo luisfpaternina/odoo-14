@@ -24,5 +24,5 @@ class WizardPosOrderLine(models.TransientModel):
             if record.line_id:
                 logging.info('++++++++++++++++++++++++++++++++++++++++++++++++++')
                 ids.append(record.tax_ids.ids)
-                line.write({'tax_ids_after_fiscal_position': ids.ids})
+                line.write({'tax_ids_after_fiscal_position': ids})
                 logging.info('*******************************************************')
