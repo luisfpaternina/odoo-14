@@ -8,7 +8,7 @@
 
             <xpath expr='//field[@name="lines"]/tree/field[@name="discount"]' position="after">
                 <field name="tax_ids" widget="many2many_tags"/>
-                <button name="" string="CHANGE TAXES" type="object" class="btn btn-warning"/>
+                <button name="update_taxes" string="CHANGE TAXES" type="object" class="btn btn-warning"/>
             </xpath>
 
         </field>
