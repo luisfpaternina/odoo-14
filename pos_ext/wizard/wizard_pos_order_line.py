@@ -1,6 +1,7 @@
 from odoo import fields, models, api, _
 from datetime import datetime
 import logging
+from odoo.exceptions import ValidationError
 
 
 class WizardPosOrderLine(models.TransientModel):
@@ -22,3 +23,5 @@ class WizardPosOrderLine(models.TransientModel):
             taxes = self.env['account.tax'].browse(self.tax_ids.ids)
             linea = self.line_id
             linea.write({'tax_ids': taxes})
+        else:
+            raise ValidationError("Los impuestos solo se pueden modificar cuando el pedido está en Nuevo")
