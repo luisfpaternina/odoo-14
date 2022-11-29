@@ -18,6 +18,6 @@ class WizardPosOrderLine(models.TransientModel):
     def update_taxes(self):
         ids = []
         for record in self:
-            if not record.tax_ids_after_fiscal_position:
+            if not record.line_id.tax_ids_after_fiscal_position:
                 ids.append(record.tax_ids.ids)
-                record.write({'tax_ids_after_fiscal_position': [(6, 0 , ids)]})
+                record.line_id.write({'tax_ids_after_fiscal_position': [(6, 0 , ids)]})
