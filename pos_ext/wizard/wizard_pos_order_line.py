@@ -19,9 +19,10 @@ class WizardPosOrderLine(models.TransientModel):
 
     def update_taxes(self):
         ids = []
+        line = self.env['pos.order.line'].search([('id', '=', self.line_id.id)], limit=1)
         for record in self:
             if record.line_id:
                 logging.info('++++++++++++++++++++++++++++++++++++++++++++++++++')
                 ids.append(record.tax_ids.ids)
-                record.line_id.write({'tax_ids_after_fiscal_position': [(6, 0 , ids)]})
+                line.write({'tax_ids_after_fiscal_position': [(6, 0 , ids)]})
                 logging.info('*******************************************************')
