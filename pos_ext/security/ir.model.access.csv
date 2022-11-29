@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+manager_model_pos_order_line_wizard,user_model_pos_order_line_wizard,model_pos_order_line_wizard,sat_companies_stock.gadgets_manager_group,1,1,1,1
