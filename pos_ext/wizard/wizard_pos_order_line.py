@@ -18,6 +18,7 @@ class WizardPosOrderLine(models.TransientModel):
         string="Taxes")
 
     def update_taxes(self):
-        taxes = self.env['account.tax'].browse(self.tax_ids.ids)
-        linea = self.line_id
-        linea.write({'tax_ids': taxes})
+        if self.order_id.state == 'draft':
+            taxes = self.env['account.tax'].browse(self.tax_ids.ids)
+            linea = self.line_id
+            linea.write({'tax_ids': taxes})
