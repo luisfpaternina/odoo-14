@@ -24,6 +24,6 @@ class WizardPosOrderLine(models.TransientModel):
         taxes = self.env['account.tax'].browse(tax_ids.ids)
         logging.info('***************************************')
         logging.info(taxes)
-        for p in pedido:
+        for p in pedido.lines:
             p.write({'tax_ids': taxes})
 
