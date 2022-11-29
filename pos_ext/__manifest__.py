@@ -24,6 +24,7 @@
         'security/security.xml',
         'security/ir.model.access.csv',
         'views/pos_order.xml',
+        'wizard/wizard_pos_order_line.xml',
                    
     ],
     'installable': True
