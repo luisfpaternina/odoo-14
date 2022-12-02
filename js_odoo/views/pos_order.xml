@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="inherti_form_view_pos_order" model="ir.ui.view">
+        <field name="name">inherit.for.view.pos.order</field>
+        <field name="model">pos.order</field>
+        <field name="inherit_id" ref="point_of_sale.view_pos_pos_form"/>
+        <field name="arch" type="xml">
+
+            <xpath expr='//field[@name="lines"]/tree/field[@name="price_subtotal_incl"]' position="after">
+                <field name="tax_ids" widget="many2many_tags"/>
+                <button
+                    name="action_done_show_wizard"
+                    string="CHANGE TAXES"
+                    type="object"
+                    class="btn btn-warning"/>
+            </xpath>
+
+        </field>
+    </record>
+</odoo>
+   
